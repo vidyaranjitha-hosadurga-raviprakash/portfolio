@@ -47,7 +47,7 @@ const projectDetails = [
     name: "Personal Portfolio Website",
     description:
       "This is a personal portfolio website to materialize my details and projects under one roof.",
-    link: "https://vidyaranjitha-hosadurga-raviprakash-portfolio.netlify.app",
+    link: "https://hosadurga-raviprakash-portfolio.netlify.app/",
     tech: "React.js, Express.js, MUI",
   },
   {
