@@ -33,7 +33,10 @@ export const ResumeDisplayDetails = ({ detailsType }) => {
       }
       default: {
         return (
-          <Button variant="contained" sx={resumeButtonStyles}>
+          <Button
+            variant="contained"
+            sx={{ ...resumeButtonStyles, pointerEvents: "none" }}
+          >
             {data}
           </Button>
         );

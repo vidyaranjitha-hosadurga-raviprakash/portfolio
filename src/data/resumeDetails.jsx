@@ -25,10 +25,10 @@ const educationDetails = [
 const experienceDetails = [
   {
     name: "Commscope Networks Private Limited",
-    place: BLR_PLACE,
+    place: `Engineer II,  ${BLR_PLACE}`,
     year: "2018-2022",
     description:
-      "Engineer 2. I've 2 years experience as front-end developer. Contributed towards implementation of  various features for customer’s internal web application.",
+      "I've 2 years of experience as front-end developer. Contributed towards implementation of  various features for customer’s internal web application.",
   },
 ];
 
