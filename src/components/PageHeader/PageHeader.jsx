@@ -4,7 +4,7 @@ import { Typography, Grid } from "@mui/material";
 import { Divider } from "components";
 import { headingVariants, mainHeadingStyle } from "styles/commonStyles";
 
-export const PageHeader = ({ info: { heading, subheading } }) => {
+export const PageHeader = ({ info: { heading = "", subheading = "" } }) => {
   return (
     <Grid
       container

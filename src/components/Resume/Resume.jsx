@@ -57,7 +57,7 @@ export const Resume = () => {
       }}
     >
       <Stack spacing={5}>
-        <PageHeader info={{ heading: "Resume", subheading: "" }} />
+        <PageHeader info={{ heading: "Resume" }} />
         <Grid container className="resume-card">
           <Grid item>
             <Box className="resume-container">

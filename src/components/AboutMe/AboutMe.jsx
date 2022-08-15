@@ -13,7 +13,7 @@ export const AboutMe = () => {
       }}
     >
       <Stack spacing={5}>
-        <PageHeader info={{ heading: "About", subheading: "Why choose me?" }} />
+        <PageHeader info={{ heading: "About me" }} />
         <Grid container sx={{ ...flexCenter }}>
           <Grid
             container
