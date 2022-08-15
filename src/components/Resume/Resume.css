@@ -1,0 +1,83 @@
+.resume-card {
+  min-height: 360px;
+  width: 1000px;
+}
+
+.resume-card ul > li::marker {
+  font-size: 2rem;
+}
+
+.resume-container {
+  box-shadow: 15px 0 9px -15px var(--primary-color);
+  height: 100%;
+  width: 315px;
+}
+
+.resume-sidebar-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.resume-sidebar-icons {
+  width: 40px;
+  height: 100%;
+  z-index: 1;
+  background-color: var(--primary-color);
+  position: absolute;
+}
+
+.resume-sidebar-item-icon {
+  height: 15px;
+  width: 15px;
+  margin: 0 30px 0 0;
+}
+
+.resume-sidebar-items {
+  width: 86%;
+  position: relative;
+  z-index: 2;
+}
+
+.resume-sidebar-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 40px;
+  margin: 15px 0;
+  padding: 0 8px;
+  border-radius: 20px;
+  width: 30px;
+  transition: width 0.6s ease;
+}
+
+.selected-item {
+  background-color: var(--primary-color);
+  width: 100%;
+}
+.resume-sidebar-item img {
+  height: 25px;
+  width: 25px;
+}
+
+.resume-sidebar-item-label {
+  white-space: nowrap;
+  font-family: "Poppins SemiBold";
+}
+
+.max-skill-percentage {
+  position: relative;
+  height: 15px;
+  width: 40%;
+  left: 1rem;
+  background-color: var(--primary-color);
+}
+
+.max-skill-percentage .score-percentage-bar {
+  position: absolute;
+  height: 15px;
+  transition: 1s ease;
+  background-color: var(--success);
+}
