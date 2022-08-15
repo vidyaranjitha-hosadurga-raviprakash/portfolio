@@ -64,7 +64,7 @@ export const ContactForm = () => {
       setUserInputs(INITIAL_STATE);
       toast.success("Mail sent successfully!");
     } catch (error) {
-      toast.error("Failed to error mail!");
+      toast.error("Failed to mail!");
     }
     setIsLoading(false);
   };
