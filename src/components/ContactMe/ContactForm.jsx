@@ -3,7 +3,6 @@ import { toast } from "react-toastify";
 import { Grid, TextField, TextareaAutosize } from "@mui/material";
 import { Send as SendIcon } from "@mui/icons-material";
 import LoadingButton from "@mui/lab/LoadingButton";
-import { isEmpty } from "utils/generalOperations";
 
 const contactFormInputFields = [
   {
@@ -43,21 +42,9 @@ export const ContactForm = () => {
     setUserInputs({ ...userInputs, [fieldName]: event.target.value });
   };
 
-  const validateForm = (inputs) => {
-    var response = { status: true };
-    if (isEmpty(inputs)) {
-      response.status = false;
-    }
-    return response;
-  };
-
   const submitHandler = async (event) => {
     event.preventDefault();
     try {
-      const { status } = validateForm({ ...userInputs });
-      if (!status) {
-        return toast.error("Please fill all the fields");
-      }
       setIsLoading(true);
       setUserInputs({ ...userInputs });
       await sendMail(userInputs);
@@ -82,6 +69,7 @@ export const ContactForm = () => {
           return (
             <Grid item key={index}>
               <TextField
+                required
                 value={userInputs[name]}
                 label={name}
                 type={type}
@@ -96,6 +84,7 @@ export const ContactForm = () => {
 
         <Grid item>
           <TextareaAutosize
+            required
             value={userInputs.message}
             minRows={5}
             placeholder="Type the message here!"
