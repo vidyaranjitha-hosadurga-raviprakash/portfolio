@@ -26,6 +26,7 @@ export const ContactForm = () => {
 
   const sendMail = async (userInputs) => {
     const requestOptions = {
+      baseURL: "https://api-vhrportfolio.herokuapp.com",
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(userInputs),
