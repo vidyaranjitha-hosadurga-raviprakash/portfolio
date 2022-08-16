@@ -26,12 +26,14 @@ export const ContactForm = () => {
 
   const sendMail = async (userInputs) => {
     const requestOptions = {
-      baseURL: "https://api-vhrportfolio.herokuapp.com",
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(userInputs),
     };
-    return await fetch("/mail", requestOptions)
+    return await fetch(
+      "https://api-vhrportfolio.herokuapp.com/mail",
+      requestOptions
+    )
       .then((res) => res.json())
       .catch((error) => {
         console.log("sendMail: Failed to send mail, error = ", error);
