@@ -30,7 +30,7 @@ export const ContactForm = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(userInputs),
     };
-    return await fetch("http://localhost:5001/mail", requestOptions)
+    return await fetch("/mail", requestOptions)
       .then((res) => res.json())
       .catch((error) => {
         console.log("sendMail: Failed to send mail, error = ", error);
