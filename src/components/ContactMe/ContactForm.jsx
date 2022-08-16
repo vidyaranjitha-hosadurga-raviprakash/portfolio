@@ -55,8 +55,9 @@ export const ContactForm = () => {
       toast.success("Mail sent successfully!");
     } catch (error) {
       toast.error("Failed to mail!");
+    } finally {
+      setIsLoading(false);
     }
-    setIsLoading(false);
   };
   return (
     <form onSubmit={(e) => submitHandler(e)}>
