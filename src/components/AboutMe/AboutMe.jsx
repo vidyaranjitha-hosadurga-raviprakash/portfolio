@@ -34,8 +34,8 @@ export const AboutMe = () => {
                 <Typography component="span" color="primary">
                   a passionate Front End developer
                 </Typography>
-                . I've ~2.5 years of experience in developing qualitive,
-                responsive web applications to deliver a intuitive, profound
+                . I've ~3.5 years of experience in developing qualitive,
+                responsive, accessible web applications to deliver a intuitive, profound
                 user experience.
               </Typography>
             </Grid>

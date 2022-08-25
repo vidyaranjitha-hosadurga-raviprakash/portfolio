@@ -28,7 +28,7 @@ const experienceDetails = [
     place: `Engineer II,  ${BLR_PLACE}`,
     year: "2018-2022",
     description:
-      "I've ~2.5 years of experience as front-end developer. Contributed towards implementation of  various features for customer’s internal web application.",
+      "I've ~3.5 years of experience as front-end developer. Contributed towards implementation of  various features for customer’s internal web application.",
   },
 ];
 
