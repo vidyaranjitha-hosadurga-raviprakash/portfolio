@@ -49,7 +49,6 @@ export const ContactForm = () => {
     event.preventDefault();
     try {
       setIsLoading(true);
-      setUserInputs({ ...userInputs });
       await sendMail(userInputs);
       setUserInputs(INITIAL_STATE);
       toast.success("Mail sent successfully!");
