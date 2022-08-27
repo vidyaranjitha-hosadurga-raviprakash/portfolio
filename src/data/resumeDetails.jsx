@@ -46,16 +46,17 @@ const projectDetails = [
   {
     name: "Personal Portfolio Website",
     description:
-      "This is a personal portfolio website to materialize my details and projects under one roof.",
-    link: "https://hosadurga-raviprakash-portfolio.netlify.app/",
-    tech: "React.js, Express.js, MUI",
+      `This is a personal portfolio website to materialize my details and projects under one roof.`,
+    link: `https://hosadurga-raviprakash-portfolio.netlify.app/`,
+    tech: `React.js, Express.js, MUI`,
   },
   {
     name: "Tracking app",
     description:
-      "This web app allows to add/update activities/tasks. Subscribers will get the push notifications on status of the activities/tasks.",
-    link: "https://track-us.netlify.app/",
-    tech: "React.js, Express.js, Firebase, MUI",
+      `This web app is the digital task tracker.It allows to add/update activities/tasks. 
+      Additionally Subscribers will get the push notifications on status of the activities/ tasks.`,
+    link: `https://trackaround.netlify.app/`,
+    tech: `React.js, Express.js, Firebase, MUI`,
   },
 ];
 
