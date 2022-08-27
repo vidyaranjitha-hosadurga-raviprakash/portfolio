@@ -44,17 +44,15 @@ const skillsDetails = [
 
 const projectDetails = [
   {
-    name: "Personal Portfolio Website",
-    description:
-      `This is a personal portfolio website to materialize my details and projects under one roof.`,
+    name: `Personal Portfolio Website`,
+    description: `This is a personal portfolio website to materialize my details and projects under one roof.`,
     link: `https://hosadurga-raviprakash-portfolio.netlify.app/`,
     tech: `React.js, Express.js, MUI`,
   },
   {
-    name: "Tracking app",
-    description:
-      `This web app is the digital task tracker.It allows to add/update activities/tasks. 
-      Additionally Subscribers will get the push notifications on status of the activities/ tasks.`,
+    name: `Tracking app`,
+    description: `This web application is a digital task tracker. It allows to add/update/delete tasks. 
+      Additionally, subscribers will get the push notifications on status of the tasks.`,
     link: `https://trackaround.netlify.app/`,
     tech: `React.js, Express.js, Firebase, MUI`,
   },
