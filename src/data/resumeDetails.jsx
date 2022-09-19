@@ -54,7 +54,7 @@ const projectDetails = [
     description: `This web application is a digital task tracker. It allows to add/update/delete tasks. 
       Additionally, subscribers will get the push notifications on status of the tasks.`,
     link: `https://trackaround.netlify.app/`,
-    tech: `React.js, Express.js, Firebase, MUI`,
+    tech: `React.js, Express.js, Firebase, MUI, mongoDB`,
   },
 ];
 

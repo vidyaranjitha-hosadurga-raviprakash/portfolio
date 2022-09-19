@@ -113,7 +113,7 @@ export const Profile = () => {
                 </Button>
               </Grid>
               <Grid item>
-                {/* TODO : Place resume in public foler */}
+                {/* TODO : Place resume in public folder */}
                 <Button
                   variant="outlined"
                   href="vidyaranjitha_hosdurga_raviprakash_resume.pdf"
