@@ -3,11 +3,11 @@ import { Link as ScrollLink } from "react-scroll";
 import { Box, Grid, Button, Drawer, IconButton } from "@mui/material";
 import { Menu as MenuIcon, Close as CloseIcon } from "@mui/icons-material/";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { isActiveEle } from "utils/generalOperations";
 
 import { ThemeToggler } from "components";
 import { useDarkMode } from "contexts";
 import { LIGHT_MODE, navbarItems } from "data/Constants";
+import { isActiveEle } from "utils/generalOperations";
 
 export const Navbar = () => {
   const [selectedNav, setSelectedNav] = useState(0);
