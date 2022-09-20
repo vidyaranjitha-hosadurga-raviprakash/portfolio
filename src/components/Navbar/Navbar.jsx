@@ -3,7 +3,6 @@ import { Link as ScrollLink } from "react-scroll";
 import { Box, Grid, Button, Drawer, IconButton } from "@mui/material";
 import { Menu as MenuIcon, Close as CloseIcon } from "@mui/icons-material/";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import Sticky from "react-stickynode";
 
 import { ThemeToggler } from "components";
 import { useDarkMode } from "contexts";
@@ -22,7 +21,7 @@ export const Navbar = () => {
     [mode]
   );
 
-  const displayNavbarItems = () => {
+  const displayNavbarItems = useMemo(() => {
     return (
       <>
         {navbarItems.map((item, index) => (
@@ -39,7 +38,7 @@ export const Navbar = () => {
         </Grid>
       </>
     );
-  };
+  }, []);
 
   const sideDrawer = () => {
     return (
@@ -72,7 +71,7 @@ export const Navbar = () => {
               spacing={4}
               alignItems="center"
             >
-              {displayNavbarItems()}
+              {displayNavbarItems}
             </Grid>
           </Grid>
         </Grid>
@@ -81,31 +80,32 @@ export const Navbar = () => {
   };
 
   return (
-    <Sticky enabled innerZ={99}>
-      <Box
-        component={"header"}
-        style={{
-          padding: "1rem 2rem",
-          background: navBarBgColor,
-        }}
-      >
-        <Grid container spacing={3} justifyContent="flex-end">
-          <Grid item>
-            <Grid container item spacing={2}>
-              {isMobileScreen ? (
-                <Grid item mt={0.5}>
-                  <IconButton onClick={() => setDrawerOpen(true)}>
-                    <MenuIcon />
-                  </IconButton>
-                  {sideDrawer()}
-                </Grid>
-              ) : (
-                <>{displayNavbarItems()}</>
-              )}
-            </Grid>
+    <Box
+      component={"header"}
+      style={{
+        padding: "1rem 2rem",
+        background: navBarBgColor,
+        position: "sticky",
+        zIndex: "99",
+        top: "0",
+      }}
+    >
+      <Grid container spacing={3} justifyContent="flex-end">
+        <Grid item>
+          <Grid container item spacing={2}>
+            {isMobileScreen ? (
+              <Grid item mt={0.5}>
+                <IconButton onClick={() => setDrawerOpen(true)}>
+                  <MenuIcon />
+                </IconButton>
+                {sideDrawer()}
+              </Grid>
+            ) : (
+              <>{displayNavbarItems}</>
+            )}
           </Grid>
         </Grid>
-      </Box>
-    </Sticky>
+      </Grid>
+    </Box>
   );
 };

@@ -20,7 +20,7 @@ export const App = () => {
         transition={Slide}
       />
 
-      <Navbar></Navbar>
+      <Navbar />
       <Container component="main">
         <section id={navbarItems[0]}>
           <Home />
