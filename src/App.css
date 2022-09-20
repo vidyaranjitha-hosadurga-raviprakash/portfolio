@@ -4,6 +4,10 @@
   --secondary-color: #212121;
   --white: white;
   --success: #388e3c;
+  --font-weight-boldest: 1000;
+  --font-weight-bold: 800;
+  --font-weight-medium: 600;
+  --font-weight-light: 500;
 }
 
 p.first-letter-large::first-letter {
@@ -19,4 +23,9 @@ p.first-letter-large::first-letter {
 
 .capitalize {
   text-transform: capitalize;
+}
+
+.nav-item.active {
+  font-weight: var(--font-weight-medium);
+  border: 1px solid var(--primary-color);
 }

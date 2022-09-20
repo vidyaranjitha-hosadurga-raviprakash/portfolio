@@ -3,12 +3,14 @@ import { Link as ScrollLink } from "react-scroll";
 import { Box, Grid, Button, Drawer, IconButton } from "@mui/material";
 import { Menu as MenuIcon, Close as CloseIcon } from "@mui/icons-material/";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { isActiveEle } from "utils/generalOperations";
 
 import { ThemeToggler } from "components";
 import { useDarkMode } from "contexts";
 import { LIGHT_MODE, navbarItems } from "data/Constants";
 
 export const Navbar = () => {
+  const [selectedNav, setSelectedNav] = useState(0);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const isMobileScreen = useMediaQuery("(max-width:480px)");
   const { mode } = useDarkMode();
@@ -26,8 +28,21 @@ export const Navbar = () => {
       <>
         {navbarItems.map((item, index) => (
           <Grid key={index} item>
-            <Button key={index} mb={2} color="primary">
-              <ScrollLink to={item} spy smooth offset={-100} duration={500}>
+            <Button
+              key={index}
+              mb={2}
+              color="primary"
+              className={`nav-item ${isActiveEle(index, selectedNav)}`}
+              disableRipple
+            >
+              <ScrollLink
+                to={item}
+                spy
+                smooth
+                offset={-100}
+                duration={500}
+                onClick={() => setSelectedNav(index)}
+              >
                 {item}
               </ScrollLink>
             </Button>
@@ -38,7 +53,7 @@ export const Navbar = () => {
         </Grid>
       </>
     );
-  }, []);
+  }, [selectedNav]);
 
   const sideDrawer = () => {
     return (
